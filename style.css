@@ -1,0 +1,234 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe6f0, #fce4ff);
+  background-attachment: fixed;
+  color: #333;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+::selection {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  position: relative;
+}
+
+/* Decorative Background Elements */
+.background-decor {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, #ff4c9b 0%, transparent 70%);
+  filter: blur(70px);
+  z-index: 0;
+}
+
+.background-decor::after {
+  content: '';
+  position: absolute;
+  bottom: -90px;
+  left: -90px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #00bfff 0%, transparent 70%);
+  filter: blur(70px);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+  color: #000;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ff1493;
+}
+
+/* Products Section */
+.products {
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #e60073;
+  margin-bottom: 2.5rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: linear-gradient(145deg, #ffe6f0, #fff0f8);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(255, 105, 180, 0.3);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff4c9b;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e60073;
+  margin-bottom: 1.2rem;
+}
+
+.add-to-cart {
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+
+.add-to-cart:hover {
+  background-color: #0099cc;
+}
+.checkout-btn {
+  display: inline-block;
+  background: #00bfff; /* Green for success */
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.checkout-btn:hover {
+  background: skyblue;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 4rem;
+}
+
+/* Cart Page */
+.cart-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.cart-item h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.cart-item button {
+  background: #dc3545;
+  border: none;
+  padding: 00.5rem 1rem;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cart-item button:hover {
+  background: #c82333;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qty-control button {
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.qty-control button:hover {
+  background: #0056b3;
+}
+
