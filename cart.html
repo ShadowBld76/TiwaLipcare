@@ -87,13 +87,26 @@
       <span></span>
     </div>
   </header>
- <section class="cart-page">
-  <h2>Your Shopping Cart</h2>
+<section class="cart-page">
+  <div class="page-header">
+    <h2>Your Shopping Cart</h2>
+    <p>Manage your items and proceed to checkout</p>
+  </div>
+  
   <div id="cart-list"></div>
-  <a href="checkout.html" class="checkout-btn">Checkout</a>
+
+  <<div class="cart-summary">
+  <div class="summary-line">
+    <span>Total Amount:</span>
+    <span id="cart-total" class="highlight-price">₦0.00</span>
+  </div>
+  <a href="checkout.html" class="checkout-btn">Proceed to Checkout &rarr;</a>
+</div>
+
 </section>
+
   <footer>
-    <p>&copy; 2025 TiwaLipcare. All rights reserved.</p>
+    <p>&copy; 2025 ShopMate. All rights reserved.</p>
   </footer>
   <script>
     const hamburger = document.querySelector('.hamburger');
